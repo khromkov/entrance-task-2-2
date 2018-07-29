@@ -1,0 +1,29 @@
+.Weather {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.Weather__item {
+  & + & {
+    margin-left: 18px;
+  }
+}
+
+.Weather__title {
+  color: #858585;
+  font-size: 14px;
+}
+
+.Weather__value {
+  align-items: center;
+  color: #333;
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+.Weather__valueIcon {
+  margin-left: 5px;
+}

@@ -1,0 +1,44 @@
+.Control {
+  border-radius: 20px;
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::after {
+    border: 2px solid rgb(199, 199, 199);
+    border-radius: 20px;
+    content: ' ';
+    display: none;
+    position: absolute;
+  }
+}
+
+html.utilityfocus .Control {
+  &:focus {
+    &::after {
+      display: initial;
+    }
+  }
+}
+
+.Control_type_default {
+  &::after {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+}
+
+$margin: -5px;
+
+.Control_type_link {
+  &::after {
+    bottom: $margin;
+    left: $margin;
+    right: $margin;
+    top: $margin;
+  }
+}

@@ -1,0 +1,50 @@
+.Button {
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 300ms;
+}
+
+.Button_size_s {
+  font-size: 13px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 15px;
+}
+
+.Button_size_xl {
+  font-size: 18px;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 15px;
+}
+
+.Button_theme_action {
+  background: #ffd93e;
+
+  &:hover {
+    background: #ffcd00;
+  }
+}
+
+.Button_theme_second {
+  background: white;
+  color: #333;
+
+  &:hover {
+    background: rgb(240, 240, 240);
+  }
+}
+
+.Button_theme_normal {
+  background: #f7f7f7;
+
+  &:hover {
+    background: rgb(233, 233, 233);
+  }
+}
+
+.Button_theme_pseudo {
+  background: transparent;
+}

@@ -1,7 +1,6 @@
 import Framework from 'framework';
-import DeviceCard from './components/DeviceCard';
+import './reset.css';
+import './main.scss';
+import Page from './components/Page';
 
-Framework.render(
-  document.getElementById('container'),
-  Framework.createElement(DeviceCard, { title: 'title', subTitle: 'subTitle' }),
-);
+Framework.render(document.getElementById('container'), Framework.createElement(Page));

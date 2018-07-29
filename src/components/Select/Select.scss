@@ -1,0 +1,9 @@
+.Select {
+  display: inline-flex;
+}
+
+.Select__item {
+  & + & {
+    margin-left: 10px;
+  }
+}

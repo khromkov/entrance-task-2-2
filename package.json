@@ -6,9 +6,19 @@
     "start": "webpack-dev-server"
   },
   "devDependencies": {
+    "autoprefixer": "^9.0.1",
+    "css-loader": "^1.0.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
+    "node-sass": "^4.9.2",
+    "postcss-loader": "^2.1.6",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "stylelint": "^9.4.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^0.8.1",
     "webpack": "^4.16.3",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5"
@@ -30,6 +40,10 @@
     "*.js": [
       "./node_modules/.bin/eslint --fix",
       "git add"
+    ],
+    "*.scss": [
+      "./node_modules/.bin/stylelint --no-ignore --fix",
+      "git add --force"
     ],
     "*.{json,css,md}": [
       "./node_modules/.bin/prettier --write",

@@ -1,0 +1,84 @@
+@media (min-width: 650px) {
+  .Form {
+    margin: auto;
+    width: 630px;
+  }
+}
+
+.Form__body {
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px;
+}
+
+.Form__title {
+  color: #333;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.Form__status {
+  color: #333;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.Form__control {
+  margin-top: 25px;
+}
+
+.Form__values {
+  margin: 20px -25px 0;
+  overflow: auto;
+  padding: 0 25px;
+}
+
+.Form__actions {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.Form__action {
+  flex: 1;
+
+  & + & {
+    margin-left: 16px;
+  }
+}
+
+@media (max-width: 649px) {
+  .Form {
+    bottom: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    left: 20px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .Form__title {
+    font-size: 17px;
+  }
+
+  .Form__status {
+    font-size: 12px;
+  }
+
+  .Form__body {
+    flex-grow: 1;
+  }
+
+  .Form__actions {
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+
+  .Form__action {
+    & + & {
+      margin: 16px 0 0;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.BlockMain {
+  height: 331px;
+  position: relative;
+  width: 630px;
+}
+
+.BlockMain__bg {
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.BlockMain__content {
+  padding: 25px;
+}
+
+.BlockMain__title {
+  color: #333;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.BlockMain__legent {
+  color: #333;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.BlockMain__weather {
+  margin-top: 25px;
+}

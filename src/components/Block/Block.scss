@@ -1,0 +1,32 @@
+.Block {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.Block__title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.Block__header {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  height: 30px;
+}
+
+.Block__content {
+  /* fix clip box-shadow by scroll bar */
+  margin-bottom: -10px;
+  margin-top: 20px;
+  overflow: auto;
+  padding-bottom: 10px;
+}
+
+.Block__left {
+  margin-left: 13px;
+}
+
+.Block__right {
+  margin-left: auto;
+}
