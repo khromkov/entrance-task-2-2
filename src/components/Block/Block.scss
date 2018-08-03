@@ -1,6 +1,7 @@
 .Block {
   display: flex;
   flex-flow: column nowrap;
+  width: 100%;
 }
 
 .Block__title {
@@ -16,11 +17,7 @@
 }
 
 .Block__content {
-  /* fix clip box-shadow by scroll bar */
-  margin-bottom: -10px;
   margin-top: 20px;
-  overflow: auto;
-  padding-bottom: 10px;
 }
 
 .Block__left {

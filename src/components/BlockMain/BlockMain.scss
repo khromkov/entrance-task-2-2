@@ -12,6 +12,13 @@
 }
 
 .BlockMain__content {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.BlockMain__info {
   padding: 25px;
 }
 
@@ -29,4 +36,8 @@
 
 .BlockMain__weather {
   margin-top: 25px;
+}
+
+.BlockMain__scripts {
+  padding: 20px;
 }

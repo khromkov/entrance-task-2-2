@@ -1,38 +1,8 @@
 import Framework from 'framework';
 import Block from 'components/Block';
 import Button from 'components/Button';
-import Card from 'components/Card';
-import './BlockScripts.scss';
-
-const data = {
-  devices: [
-    {
-      icon: 'light',
-      state: 'on',
-      title: 'Выключить весь свет в доме и во дворе',
-    },
-    {
-      icon: 'scheduled',
-      title: 'Я ухожу',
-    },
-    {
-      icon: 'light',
-      state: 'on',
-      title: 'Включить свет в коридоре',
-    },
-    {
-      icon: 'temp',
-      state: 'on',
-      title: 'Набрать горячую ванну',
-      subTitle: 'Начнётся в 18:00',
-    },
-    {
-      icon: 'temp',
-      state: 'on',
-      title: 'Сделать пол тёплым во всей квартире',
-    },
-  ],
-};
+import CardGroup from 'components/CardGroup';
+import { cards } from './data';
 
 const BlockScripts = props => {
   const { size } = props;
@@ -47,9 +17,7 @@ const BlockScripts = props => {
         Framework.createElement(Button, { theme: 'pseudo' }, 'right'),
       ].join(''),
     },
-    `<div class="BlockScripts">${data.devices
-      .map(device => Framework.createElement(Card, { ...device, size: 's' }))
-      .join('')}</div>`,
+    Framework.createElement(CardGroup, { cards, cardSize: 's', theme: CardGroup.THEMES.GRID }),
   );
 };
 

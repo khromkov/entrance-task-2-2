@@ -1,0 +1,97 @@
+export const cards = [
+  {
+    icon: 'light',
+    state: 'on',
+    title: 'Xiaomi Yeelight LED Smart Bulb',
+    subTitle: 'Включено',
+    size: 'l',
+  },
+  {
+    icon: 'light',
+    state: 'off',
+    title: 'D-Link Omna 180 Cam',
+    subTitle: 'Включится в 17:00',
+    size: 'l',
+  },
+  {
+    icon: 'temp',
+    state: 'off',
+    title: 'Elgato Eve Degree Connected',
+    subTitle: 'Выключено до 17:00',
+    size: 'l',
+  },
+  {
+    icon: 'light',
+    state: 'off',
+    title: 'LIFX Mini Day & Dusk A60 E27',
+    subTitle: 'Включится в 17:00',
+    size: 'l',
+  },
+  {
+    icon: 'light',
+    state: 'on',
+    title: 'Xiaomi Mi Air Purifier 2S',
+    subTitle: 'Включено',
+    size: 'l',
+  },
+  {
+    icon: 'light',
+    state: 'off',
+    title: 'Philips Zhirui',
+    subTitle: 'Выключено',
+    size: 'l',
+  },
+  {
+    icon: 'light',
+    state: 'on',
+    title: 'Xiaomi Yeelight LED Smart Bulb',
+    subTitle: 'Включено',
+    size: 'l',
+  },
+  {
+    icon: 'light',
+    state: 'off',
+    title: 'D-Link Omna 180 Cam',
+    subTitle: 'Включится в 17:00',
+    size: 'l',
+  },
+  {
+    icon: 'temp',
+    state: 'off',
+    title: 'Elgato Eve Degree Connected',
+    subTitle: 'Выключено до 17:00',
+    size: 'l',
+  },
+  {
+    icon: 'light',
+    state: 'off',
+    title: 'LIFX Mini Day & Dusk A60 E27',
+    subTitle: 'Включится в 17:00',
+    size: 'l',
+  },
+  {
+    icon: 'light',
+    state: 'on',
+    title: 'Xiaomi Mi Air Purifier 2S',
+    subTitle: 'Включено',
+    size: 'l',
+  },
+  {
+    icon: 'light',
+    state: 'off',
+    title: 'Philips Zhirui',
+    subTitle: 'Выключено',
+    size: 'l',
+  },
+];
+
+export const filter = {
+  value: 'all',
+  items: [
+    { value: 'all', text: 'Все' },
+    { value: 'kitchen', text: 'Кухня' },
+    { value: 'hall', text: 'Зал' },
+    { value: 'lights', text: 'Лампочки' },
+    { value: 'cameras', text: 'Камеры' },
+  ],
+};
