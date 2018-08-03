@@ -1,9 +1,9 @@
 import Framework from 'framework';
 import Control from 'components/Control';
 import Icon from 'components/Icon';
-import './DeviceCard.scss';
+import './Card.scss';
 
-export default class DeviceCard extends Framework.Component {
+export default class Card extends Framework.Component {
   render() {
     const { icon, state, title, subTitle, size, cls, ...passPropsThrough } = this.props;
 
@@ -11,16 +11,15 @@ export default class DeviceCard extends Framework.Component {
       Control,
       {
         tag: 'button',
-        cls: Framework.Component
-          .template`DeviceCard DeviceCard_size_${size} ${cls} DeviceCard_animation DeviceCard_hover`,
+        cls: Framework.Component.template`Card Card_size_${size} ${cls} Card_animation Card_hover`,
         dataId: 'card',
         ...passPropsThrough,
       },
       Framework.Component.template`
       ${icon && `<span>${Framework.createElement(Icon, { icon, state })}</span>`}
-      <div class="DeviceCard__description">
-        ${title && `<div class="DeviceCard__title">${title}</div>`}
-        ${subTitle && `<div class="DeviceCard__subTitle">${subTitle}</div>`}
+      <div class="Card__description">
+        ${title && `<div class="Card__title">${title}</div>`}
+        ${subTitle && `<div class="Card__subTitle">${subTitle}</div>`}
       </div>
       `,
     );

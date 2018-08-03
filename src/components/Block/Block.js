@@ -1,7 +1,7 @@
 import Framework from 'framework';
 import './Block.scss';
 
-export default class DeviceCard extends Framework.Component {
+export default class Card extends Framework.Component {
   render() {
     const { title, children, left, right, size } = this.props;
 

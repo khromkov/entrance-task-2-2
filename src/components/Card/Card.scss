@@ -1,4 +1,4 @@
-.DeviceCard {
+.Card {
   background: #f7f7f7;
   border: 0;
   border-radius: 20px;
@@ -10,36 +10,36 @@
   width: 200px;
 }
 
-.DeviceCard_animation {
+.Card_animation {
   transition: 200ms all;
 }
 
-.DeviceCard_hover {
+.Card_hover {
   &:hover {
     background: white;
     box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.5);
   }
 }
 
-.DeviceCard_size_s {
+.Card_size_s {
   height: 100px;
 }
 
-.DeviceCard_size_l {
+.Card_size_l {
   height: 120px;
 }
 
-.DeviceCard__description {
+.Card__description {
   margin-top: auto;
 }
 
-.DeviceCard__title {
+.Card__title {
   color: #333;
   font-size: 14px;
   font-weight: bold;
 }
 
-.DeviceCard__subTitle {
+.Card__subTitle {
   color: #858585;
   font-size: 12px;
 }

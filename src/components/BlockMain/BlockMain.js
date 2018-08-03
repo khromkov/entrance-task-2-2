@@ -1,7 +1,7 @@
 import Framework from 'framework';
 import Block from 'components/Block';
 import Weather from 'components/Weather';
-// import DeviceCard from 'components/DeviceCard';
+// import Card from 'components/Card';
 import './BlockMain.scss';
 
 /* const data = {

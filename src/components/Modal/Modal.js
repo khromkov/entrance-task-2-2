@@ -31,7 +31,7 @@ const getTransformString = transformMatrix => `
 
 const getCloneCard = (cardNode, styles) => {
   const cloneCard = cardNode.cloneNode(true);
-  cloneCard.classList.add('DeviceCard_animation');
+  cloneCard.classList.add('Card_animation');
   const cardDim = cardNode.getBoundingClientRect();
   cloneCard.style.position = 'fixed';
   cloneCard.style.top = `${cardDim.y}px`;
@@ -51,7 +51,7 @@ const getCloneCard = (cardNode, styles) => {
   return cloneCard;
 };
 
-const REMOVE_CLASS = ['DeviceCard_animation', 'DeviceCard_hover'];
+const REMOVE_CLASS = ['Card_animation', 'Card_hover'];
 
 document.addEventListener('click', e => {
   const card = Framework.getTargetNode(e.target, node => node.dataset.id === 'card');

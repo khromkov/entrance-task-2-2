@@ -1,7 +1,7 @@
 import Framework from 'framework';
 import Block from 'components/Block';
 import Button from 'components/Button';
-import DeviceCard from 'components/DeviceCard';
+import Card from 'components/Card';
 import './BlockScripts.scss';
 
 const data = {
@@ -48,7 +48,7 @@ const BlockScripts = props => {
       ].join(''),
     },
     `<div class="BlockScripts">${data.devices
-      .map(device => Framework.createElement(DeviceCard, { ...device, size: 's' }))
+      .map(device => Framework.createElement(Card, { ...device, size: 's' }))
       .join('')}</div>`,
   );
 };
