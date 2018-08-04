@@ -1,6 +1,7 @@
 .Control {
   border-radius: 20px;
   position: relative;
+  touch-action: manipulation;
 
   &:focus {
     outline: none;
