@@ -25,6 +25,8 @@ html.utilityfocus .Control {
 }
 
 .Control_type_default {
+  user-select: none;
+
   &::after {
     bottom: 0;
     left: 0;

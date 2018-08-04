@@ -14,12 +14,12 @@
   width: 108px;
 }
 
-.Header__links {
+.Header__menu {
   margin-left: 50px;
 }
 
-.Header__link {
-  & + & {
-    margin-left: 26px;
+@media (max-width: 649px) {
+  .Header__menu {
+    margin-left: auto;
   }
 }
