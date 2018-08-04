@@ -13,6 +13,19 @@
   padding: 0 15px;
 }
 
+.Button_icon {
+  display: inline-flex;
+  padding: 0;
+
+  .Icon {
+    margin: auto;
+  }
+}
+
+.Button_icon.Button_size_s {
+  width: 30px;
+}
+
 .Button_size_xl {
   font-size: 18px;
   height: 60px;
@@ -47,4 +60,8 @@
 
 .Button_theme_pseudo {
   background: transparent;
+
+  &:disabled {
+    opacity: 0.5;
+  }
 }
