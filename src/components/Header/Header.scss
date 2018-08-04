@@ -1,3 +1,5 @@
+@import 'styles/framework.scss';
+
 .Header {
   border-bottom: 1px solid #f0f0f0;
   height: 90px;
@@ -18,7 +20,12 @@
   margin-left: 50px;
 }
 
-@media (max-width: 649px) {
+@include phone {
+  .Header {
+    border-bottom: 0;
+    height: 60px;
+  }
+
   .Header__menu {
     margin-left: auto;
   }

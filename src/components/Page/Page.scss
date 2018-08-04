@@ -1,3 +1,5 @@
+@import 'styles/framework.scss';
+
 .Page {
   display: flex;
   flex-flow: column nowrap;
@@ -34,7 +36,7 @@
   }
 }
 
-@media (max-width: 1359px) and (min-width: 650px) {
+@include tablet {
   .Page__container {
     max-width: 630px;
   }
@@ -51,7 +53,7 @@
   }
 }
 
-@media (max-width: 649px) {
+@include phone {
   .Page__container {
     max-width: auto;
     padding: 0 20px;
