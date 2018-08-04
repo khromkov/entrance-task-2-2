@@ -1,3 +1,5 @@
+@import 'styles/framework.scss';
+
 .Block {
   display: flex;
   flex-flow: column nowrap;
@@ -14,10 +16,7 @@
   display: flex;
   flex-flow: row nowrap;
   height: 30px;
-}
-
-.Block__content {
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .Block__left {
@@ -26,4 +25,10 @@
 
 .Block__right {
   margin-left: auto;
+}
+
+@include phone {
+  .Block__header_hidden {
+    display: none;
+  }
 }

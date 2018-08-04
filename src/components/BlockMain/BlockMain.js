@@ -28,6 +28,7 @@ const BlockMain = () => {
     Block,
     {
       title: 'Главное',
+      hiddenTitle: true,
     },
     content,
   );

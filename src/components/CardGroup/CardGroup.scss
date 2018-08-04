@@ -1,3 +1,5 @@
+@import 'styles/framework.scss';
+
 .CardGroup_theme_inline {
   margin: -10px calc((100% - 100vw) / 2);
   overflow: auto;
@@ -56,5 +58,18 @@
 
   & + & {
     margin-top: 15px;
+  }
+}
+
+@include phone {
+  .CardGroup__wrap_theme_vertical {
+    flex-direction: row;
+  }
+
+  .CardGroup__card_theme_vertical {
+    & + & {
+      margin-left: 15px;
+      margin-top: 0;
+    }
   }
 }

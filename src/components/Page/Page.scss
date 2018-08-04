@@ -61,6 +61,10 @@
 
   .Page__row {
     flex-direction: column;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   .Page__col {

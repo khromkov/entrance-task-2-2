@@ -1,7 +1,11 @@
+@import 'styles/framework.scss';
+
 .BlockMain {
+  border-radius: 20px;
   height: 331px;
+  max-width: 630px;
+  overflow: hidden;
   position: relative;
-  width: 630px;
 }
 
 .BlockMain__bg {
@@ -40,4 +44,18 @@
 
 .BlockMain__scripts {
   padding: 20px;
+}
+
+@include phone {
+  .BlockMain {
+    height: auto;
+  }
+
+  .BlockMain__info {
+    padding-bottom: 0;
+  }
+
+  .BlockMain__content {
+    flex-direction: column;
+  }
 }
