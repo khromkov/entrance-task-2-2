@@ -1,9 +1,41 @@
+@import 'styles/framework.scss';
+
 .Select {
+  position: relative;
+}
+
+.Select__toggle {
+  display: none;
+}
+
+.Select__wrap {
   display: inline-flex;
 }
 
 .Select__item {
   & + & {
     margin-left: 10px;
+  }
+}
+
+@include tabletAndLow {
+  .Select_adaptive {
+    .Select__wrap {
+      display: none;
+    }
+
+    &.Select_open {
+      .Select__wrap {
+        display: flex;
+        flex-flow: column nowrap;
+        position: absolute;
+        top: 100%;
+        z-index: 10;
+      }
+    }
+
+    .Select__toggle {
+      display: inline-flex;
+    }
   }
 }

@@ -62,6 +62,29 @@
 }
 
 @include phone {
+  .CardGroup_theme_grid {
+    margin: -10px calc((100% - 100vw) / 2);
+    overflow: auto;
+    padding: 10px calc((100vw - 100%) / 2);
+  }
+
+  .CardGroup__group {
+    display: inline-flex;
+    flex-flow: row nowrap;
+
+    & + & {
+      margin-left: 15px;
+    }
+  }
+
+  .CardGroup__card_theme_grid {
+    flex-shrink: 0;
+
+    & + & {
+      margin-left: 15px;
+    }
+  }
+
   .CardGroup__wrap_theme_vertical {
     flex-direction: row;
   }

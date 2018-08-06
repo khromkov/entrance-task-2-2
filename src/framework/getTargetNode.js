@@ -1,6 +1,6 @@
 export default (node, func) => {
   let currentNode = node;
-  while (currentNode && currentNode.tagName !== 'BODY') {
+  while (currentNode && currentNode !== document) {
     if (func(currentNode)) {
       return currentNode;
     }

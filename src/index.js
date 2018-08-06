@@ -1,3 +1,4 @@
+import 'pepjs';
 import Framework from 'framework';
 import './reset.css';
 import './main.scss';

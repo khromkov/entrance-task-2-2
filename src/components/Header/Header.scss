@@ -3,6 +3,7 @@
 .Header {
   border-bottom: 1px solid #f0f0f0;
   height: 90px;
+  z-index: 5;
 }
 
 .Header__container {
@@ -22,8 +23,11 @@
 
 @include phone {
   .Header {
+    background: white;
     border-bottom: 0;
     height: 60px;
+    position: sticky;
+    top: 0;
   }
 
   .Header__menu {

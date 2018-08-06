@@ -14,7 +14,7 @@ const BlockDevices = props => {
     {
       size,
       title: 'Избранные устройства',
-      left: Framework.createElement(Select, filter, 'left'),
+      left: Framework.createElement(Select, { ...filter, adaptive: true }, 'left'),
       right: [
         Framework.createElement(
           Button,

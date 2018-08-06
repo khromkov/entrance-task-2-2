@@ -8,11 +8,11 @@ const Slider = props => {
   <div class="Slider Slider_theme_${theme}" data-id="slider">
     <div class="Slider__value Slider__value_min">${leftValue}</div>
     <div class="Slider__value Slider__value_max">${rightValue}</div>
-    <div class="Slider__cursor" data-id="slider__cursor"></div>
+    <div class="Slider__cursor" data-id="slider__cursor" touch-action="none"></div>
   </div>`;
 };
 
-document.addEventListener('mousedown', e => {
+document.addEventListener('pointerdown', e => {
   const cursor = Framework.getTargetNode(e.target, node => node.dataset.id === 'slider__cursor');
   if (cursor) {
     const startX = e.pageX;
@@ -23,7 +23,7 @@ document.addEventListener('mousedown', e => {
     const offsetCenterX = startX - cursorDim.x;
 
     // eslint-disable-next-line no-shadow
-    const mousemove = e => {
+    const pointermove = e => {
       const positionX = e.pageX - offsetCenterX;
       if (positionX >= sliderDim.left && positionX + cursorDim.width <= sliderDim.right) {
         cursor.style.transform = `translateX(${startOffset + e.pageX - startX}px)`;
@@ -34,13 +34,13 @@ document.addEventListener('mousedown', e => {
       }
     };
 
-    const mouseup = () => {
-      document.removeEventListener('mousemove', mousemove);
-      document.removeEventListener('mouseup', mouseup);
+    const pointerup = () => {
+      document.removeEventListener('pointermove', pointermove);
+      document.removeEventListener('pointerup', pointerup);
     };
 
-    document.addEventListener('mousemove', mousemove);
-    document.addEventListener('mouseup', mouseup);
+    document.addEventListener('pointermove', pointermove);
+    document.addEventListener('pointerup', pointerup);
   }
 });
 

@@ -22,15 +22,15 @@
     "stylelint-scss": "^3.2.0",
     "webpack": "^4.16.3",
     "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.5"
-  },
-  "dependencies": {
-    "chart.js": "^2.7.2",
+    "webpack-dev-server": "^3.1.5",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.2",
     "husky": "^1.0.0-rc.13",
     "lint-staged": "^7.2.0",
     "prettier": "^1.13.7"
+  },
+  "dependencies": {
+    "pepjs": "^0.4.3"
   },
   "husky": {
     "hooks": {

@@ -1,9 +1,10 @@
 import Framework from 'framework';
 import Button from 'components/Button';
+import Icon from 'components/Icon';
 import './Select.scss';
 
 const Select = props => {
-  const { value, items, cls } = props;
+  const { value, items, cls, adaptive } = props;
 
   const renderItems = items
     .map(item =>
@@ -20,13 +21,30 @@ const Select = props => {
     )
     .join('');
 
-  return `<span class="Select ${cls}" data-value="${value}">${renderItems}</span>`;
+  const selected = items.find(item => item.value === value);
+
+  return `
+    <span class="Select ${adaptive ? 'Select_adaptive' : ''} ${cls}" data-value="${value}">
+      ${Framework.createElement(
+        Button,
+        {
+          theme: 'action',
+          cls: 'Select__toggle',
+          dataId: 'select__toggle',
+        },
+        `${selected.text}${Framework.createElement(Icon, { icon: 'left' })}`,
+      )}
+      <span class="Select__wrap">
+        ${renderItems}
+      </span>
+    </span>
+  `;
 };
 
 document.addEventListener('click', e => {
   const item = Framework.getTargetNode(e.target, node => node.dataset.id === 'select__item');
   if (item) {
-    const select = item.parentNode;
+    const select = item.parentNode.parentNode;
     const { value } = select.dataset;
     Button.setMod(select.querySelector(`[data-value=${value}]`), 'theme', 'normal');
     Button.setMod(item, 'theme', 'action');
