@@ -1,0 +1,63 @@
+$component-width: 220px;
+$circle-width: 180px;
+$circle-offset: ($component-width - $circle-width) / 2;
+$cursor-width: 12px;
+$cursor-offset: ($circle-width - $cursor-width) / 2;
+$cursor-padding: 5px;
+
+.Spinner {
+  cursor: pointer;
+  display: inline-block;
+  height: $component-width;
+  position: relative;
+  width: $component-width;
+}
+
+.Spinner__line {
+  stroke: #f3a523;
+  stroke-width: 1;
+  transition: 300ms stroke;
+}
+
+.Spinner__line_value {
+  stroke: #f3a523;
+}
+
+.Spinner__line_value ~ .Spinner__line {
+  stroke: gray;
+}
+
+.Spinner__steps {
+  pointer-events: none;
+}
+
+.Spinner__circle {
+  align-items: center;
+  background: white;
+  border-radius: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  color: #333;
+  display: flex;
+  font-size: 66px;
+  font-weight: bold;
+  height: $circle-width;
+  justify-content: center;
+  left: $circle-offset;
+  pointer-events: none;
+  position: absolute;
+  top: $circle-offset;
+  width: $circle-width;
+}
+
+.Spinner__cursor {
+  align-items: flex-start;
+  display: flex;
+  height: 90px;
+  left: $cursor-offset;
+  padding-top: $cursor-padding;
+  position: absolute;
+  top: 0;
+  transform: rotateZ(-90deg);
+  transform-origin: bottom center;
+  width: 12px;
+}
