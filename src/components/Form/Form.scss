@@ -8,7 +8,19 @@
 .Form__body {
   background: #fff;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
   padding: 25px;
+}
+
+.Form__content {
+  flex-grow: 1;
+}
+
+.Form__content_theme_center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .Form__title {
@@ -81,4 +93,8 @@
       margin: 16px 0 0;
     }
   }
+}
+
+.Form_hidden {
+  display: none;
 }

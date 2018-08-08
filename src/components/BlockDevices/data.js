@@ -5,6 +5,7 @@ export const cards = [
     title: 'Xiaomi Yeelight LED Smart Bulb',
     subTitle: 'Включено',
     size: 'l',
+    type: 'light',
   },
   {
     icon: 'light',
@@ -12,6 +13,7 @@ export const cards = [
     title: 'D-Link Omna 180 Cam',
     subTitle: 'Включится в 17:00',
     size: 'l',
+    type: 'floor',
   },
   {
     icon: 'temp',
@@ -19,6 +21,7 @@ export const cards = [
     title: 'Elgato Eve Degree Connected',
     subTitle: 'Выключено до 17:00',
     size: 'l',
+    type: 'temp',
   },
   {
     icon: 'light',

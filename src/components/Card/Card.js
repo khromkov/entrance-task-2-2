@@ -5,7 +5,17 @@ import './Card.scss';
 
 export default class Card extends Framework.Component {
   render() {
-    const { icon, state, title, subTitle, size, cls, ...passPropsThrough } = this.props;
+    const {
+      icon,
+      state,
+      title,
+      subTitle,
+      size,
+      cls,
+      type,
+      attrs,
+      ...passPropsThrough
+    } = this.props;
 
     return Framework.createElement(
       Control,
@@ -13,6 +23,7 @@ export default class Card extends Framework.Component {
         tag: 'button',
         cls: Framework.Component.template`Card Card_size_${size} ${cls} Card_animation Card_hover`,
         dataId: 'card',
+        attrs: `${attrs} data-type="${type}"`,
         ...passPropsThrough,
       },
       Framework.Component.template`
@@ -25,3 +36,7 @@ export default class Card extends Framework.Component {
     );
   }
 }
+
+Card.defaultProps = {
+  type: 'light',
+};

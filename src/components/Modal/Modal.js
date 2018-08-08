@@ -65,7 +65,8 @@ document.addEventListener('click', e => {
     modal.style.display = 'flex';
     modal.classList.add('Modal_visible');
 
-    form = document.querySelector('.Form');
+    form = document.querySelector(`[data-form="${card.dataset.type}"]`);
+    form.classList.remove('Form_hidden');
 
     const transform = getTransform(cloneCard, form);
 
@@ -119,6 +120,7 @@ document.addEventListener('click', e => {
       openedCard.classList.add(...REMOVE_CLASS);
       openedCard = null;
       form.classList.remove('Animation');
+      form.classList.add('Form_hidden');
     }, 200);
   }
 });
