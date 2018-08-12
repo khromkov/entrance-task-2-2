@@ -18,7 +18,6 @@ const BlockMain = () => {
         ${Framework.createElement(CardGroup, {
           cards,
           theme: CardGroup.THEMES.VERTICAL,
-          cls: 'BlockMain__scripts',
         })}
       </div>
     </div>

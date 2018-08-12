@@ -3,12 +3,13 @@
 .CardGroup_theme_inline {
   margin: -10px calc((100% - 100vw) / 2);
   overflow: auto;
-  padding: 10px calc((100vw - 100%) / 2);
+  padding: 10px 0;
 }
 
 .CardGroup__wrap_theme_inline {
   display: inline-flex;
   flex-flow: row nowrap;
+  padding: 0 calc((100vw - #{$desktop-container-width}) / 2);
 }
 
 .CardGroup__card_theme_inline {
@@ -51,6 +52,7 @@
 .CardGroup__wrap_theme_vertical {
   display: inline-flex;
   flex-flow: column nowrap;
+  padding: 20px;
 }
 
 .CardGroup__card_theme_vertical {
@@ -61,11 +63,25 @@
   }
 }
 
+@include tablet {
+  .CardGroup__wrap_theme_inline {
+    padding: 0 calc((100vw - #{$tablet-container-width}) / 2);
+  }
+}
+
 @include phone {
+  .CardGroup__wrap_theme_inline {
+    padding: 0 20px;
+  }
+
   .CardGroup_theme_grid {
     margin: -10px calc((100% - 100vw) / 2);
     overflow: auto;
-    padding: 10px calc((100vw - 100%) / 2);
+    padding: 10px 0;
+  }
+
+  .CardGroup__wrap_theme_grid {
+    padding: 0 20px;
   }
 
   .CardGroup__group {
