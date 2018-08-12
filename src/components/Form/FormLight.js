@@ -7,9 +7,9 @@ const fastValues = {
   value: 'custom',
   items: [
     { value: 'custom', text: 'Вручную' },
-    { value: 'cool', text: 'Холодно' },
-    { value: 'warm', text: 'Тепло' },
-    { value: 'hot', text: 'Жарко' },
+    { value: 'day', text: 'Дневной свет' },
+    { value: 'evening', text: 'Вечерний свет' },
+    { value: 'morning', text: 'Рассвет' },
   ],
 };
 
@@ -19,7 +19,7 @@ const FormLight = props =>
     { ...props, name: 'light' },
     Framework.Component.template`
     <div class="Form__values">${Framework.createElement(Select, fastValues)}</div>
-    <div class="Form__control">${Framework.createElement(Slider)}</div>
+    <div class="Form__control">${Framework.createElement(Slider, { theme: 'light' })}</div>
   `,
   );
 

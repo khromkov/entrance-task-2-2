@@ -1,13 +1,27 @@
 import Framework from 'framework';
+import Icon from 'components/Icon';
 import './Slider.scss';
 
 const Slider = props => {
-  const { leftValue, rightValue, theme } = props;
+  const { theme } = props;
+
+  let values;
+  if (theme === 'temp') {
+    values = {
+      left: '-10',
+      right: '+30',
+    };
+  } else if (theme === 'light') {
+    values = {
+      left: Framework.createElement(Icon, { icon: 'sun_min', size: 'm' }),
+      right: Framework.createElement(Icon, { icon: 'sun_max', size: 'm' }),
+    };
+  }
 
   return Framework.Component.template`
   <div class="Slider Slider_theme_${theme}" data-id="slider">
-    <div class="Slider__value Slider__value_min">${leftValue}</div>
-    <div class="Slider__value Slider__value_max">${rightValue}</div>
+    <div class="Slider__value Slider__value_min">${values.left}</div>
+    <div class="Slider__value Slider__value_max">${values.right}</div>
     <div class="Slider__cursor" data-id="slider__cursor" touch-action="none"></div>
   </div>`;
 };
@@ -46,8 +60,6 @@ document.addEventListener('pointerdown', e => {
 
 Slider.defaultProps = {
   theme: 'temp',
-  leftValue: '-10',
-  rightValue: '+30',
 };
 
 export default Slider;

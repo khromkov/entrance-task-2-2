@@ -1,5 +1,22 @@
+$size_s: 24px;
+$size_m: 36px;
+$size_l: 40px;
+
 .Icon {
   display: inline-block;
-  height: 24px;
-  width: 24px;
+}
+
+.Icon_size_s {
+  height: $size_s;
+  width: $size_s;
+}
+
+.Icon_size_m {
+  height: $size_m;
+  width: $size_m;
+}
+
+.Icon_size_l {
+  height: $size_l;
+  width: $size_l;
 }

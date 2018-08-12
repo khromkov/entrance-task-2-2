@@ -10,6 +10,10 @@
   background-image: linear-gradient(90deg, #068fff 2%, #ffd800 51%, #f76b1c 100%);
 }
 
+.Slider_theme_light {
+  background-image: linear-gradient(90deg, #ffe682 2%, #ff9e00 100%);
+}
+
 .Slider__cursor {
   cursor: pointer;
   height: 60px;
@@ -52,12 +56,13 @@
   justify-content: center;
   position: absolute;
   top: 0;
+  width: 60px;
 }
 
 .Slider__value_min {
-  left: 20px;
+  left: 0;
 }
 
 .Slider__value_max {
-  right: 20px;
+  right: 0;
 }

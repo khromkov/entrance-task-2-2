@@ -10,6 +10,8 @@ import cloud from './cloud.svg';
 import left from './left.svg';
 import right from './right.svg';
 import menu from './menu.svg';
+import sun_min from './sun_min.svg';
+import sun_max from './sun_max.svg';
 import './Icon.scss';
 
 const icons = {
@@ -22,17 +24,23 @@ const icons = {
   left,
   right,
   menu,
+  sun_min,
+  sun_max,
 };
 
 const Icon = props => {
-  const { icon, state, cls } = props;
+  const { icon, state, cls, size } = props;
 
   let key = icon;
   if (state) {
     key += `_state_${state}`;
   }
 
-  return `<span class="${cls} Icon">${icons[key]}</span>`;
+  return `<span class="${cls} Icon Icon_size_${size}">${icons[key]}</span>`;
+};
+
+Icon.defaultProps = {
+  size: 's',
 };
 
 export default Icon;
