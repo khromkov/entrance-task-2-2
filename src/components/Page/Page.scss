@@ -3,16 +3,13 @@
 .Page {
   display: flex;
   flex-flow: column nowrap;
-  height: 100%;
   justify-content: flex-start;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
+  min-height: 100vh;
   transition: filter 200ms;
 }
 
 .Page_modal {
   filter: blur(5px);
-  overflow: hidden;
 }
 
 .Page__container {

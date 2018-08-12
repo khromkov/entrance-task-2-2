@@ -14,7 +14,7 @@ const Spinner = () => {
   }
 
   return Framework.Component.template`
-    <div class="Spinner Control" data-id="spinner" touch-action="none" data-value-min="10" data-value-max="30">
+    <div class="Spinner" data-id="spinner" touch-action="none" data-value-min="10" data-value-max="30">
       <svg class="Spinner__steps" height="${c.DIAMETR}" width="${c.DIAMETR}">
         ${lines.join('')}
       </svg>
