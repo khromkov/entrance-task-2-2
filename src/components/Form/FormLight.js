@@ -16,7 +16,7 @@ const fastValues = {
 const FormLight = props =>
   Framework.createElement(
     Form,
-    { ...props, name: 'light' },
+    { ...props, name: 'light', icon: 'light', state: 'off' },
     Framework.Component.template`
     <div class="Form__values">${Framework.createElement(Select, fastValues)}</div>
     <div class="Form__control">${Framework.createElement(Slider, { theme: 'light' })}</div>

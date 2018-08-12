@@ -23,6 +23,19 @@
   justify-content: center;
 }
 
+.Form__header {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.Form__headerRight {
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 36px;
+  font-weight: bold;
+  margin-left: auto;
+}
+
 .Form__title {
   color: #333;
   font-size: 27px;

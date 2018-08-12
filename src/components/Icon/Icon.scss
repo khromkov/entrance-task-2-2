@@ -3,7 +3,10 @@ $size_m: 36px;
 $size_l: 40px;
 
 .Icon {
+  align-items: stretch;
   display: inline-block;
+  display: flex;
+  justify-content: stretch;
 }
 
 .Icon_size_s {
