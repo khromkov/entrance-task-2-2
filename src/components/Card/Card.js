@@ -27,11 +27,13 @@ export default class Card extends Framework.Component {
         ...passPropsThrough,
       },
       Framework.Component.template`
-      ${icon && `<span>${Framework.createElement(Icon, { icon, state })}</span>`}
-      <div class="Card__description">
-        ${title && `<div class="Card__title">${title}</div>`}
-        ${subTitle && `<div class="Card__subTitle">${subTitle}</div>`}
-      </div>
+      <span class="Card__content">
+        ${icon && `<span>${Framework.createElement(Icon, { icon, state })}</span>`}
+        <span class="Card__description">
+          ${title && `<span class="Card__title">${title}</span>`}
+          ${subTitle && `<span class="Card__subTitle">${subTitle}</span>`}
+        </span>
+      </span>
       `,
     );
   }
