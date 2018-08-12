@@ -64,7 +64,6 @@ document.addEventListener('click', e => {
 
     const modal = document.querySelector('.Modal');
     modal.style.display = 'flex';
-    modal.classList.add('Modal_visible');
 
     form = document.querySelector(`[data-form="${card.dataset.type}"]`);
     form.classList.remove('Form_hidden');
@@ -82,6 +81,7 @@ document.addEventListener('click', e => {
     // eslint-disable-next-line
     form.offsetLeft;
     document.querySelector('.Page').classList.add('Page_modal');
+    modal.classList.add('Modal_visible');
     body.classList.add('modal');
 
     form.classList.add('Animation');
