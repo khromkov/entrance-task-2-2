@@ -7,6 +7,11 @@ $size_l: 40px;
   display: inline-block;
   display: flex;
   justify-content: stretch;
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .Icon_size_s {
