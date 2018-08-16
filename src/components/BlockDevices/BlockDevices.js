@@ -14,16 +14,17 @@ const BlockDevices = props => {
     {
       size,
       title: 'Избранные устройства',
+      attrs: 'data-id="devices"',
       left: Framework.createElement(Select, { ...filter, adaptive: true }, 'left'),
       right: [
         Framework.createElement(
           Button,
-          { theme: 'pseudo', icon: true },
+          { theme: 'pseudo', icon: true, dataId: 'left' },
           Framework.createElement(Icon, { icon: 'left' }),
         ),
         Framework.createElement(
           Button,
-          { theme: 'pseudo', icon: true },
+          { theme: 'pseudo', icon: true, dataId: 'right' },
           Framework.createElement(Icon, { icon: 'right' }),
         ),
       ].join(''),

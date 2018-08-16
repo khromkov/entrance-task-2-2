@@ -19,7 +19,11 @@ const FormLight = props =>
     { ...props, name: 'light', icon: 'light', state: 'off' },
     Framework.Component.template`
     <div class="Form__values">${Framework.createElement(Select, fastValues)}</div>
-    <div class="Form__control">${Framework.createElement(Slider, { theme: 'light' })}</div>
+    <div class="Form__control">
+      <div class="Form__controlWrap">
+        ${Framework.createElement(Slider, { theme: 'light' })}
+      </div>
+    </div>
   `,
   );
 
