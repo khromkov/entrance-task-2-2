@@ -13,15 +13,16 @@ const BlockScripts = props => {
     {
       size,
       title: 'Избранные сценарии',
+      attrs: 'data-id="scripts"',
       right: [
         Framework.createElement(
           Button,
-          { theme: 'pseudo', icon: true },
+          { theme: 'pseudo', icon: true, dataId: 'left' },
           Framework.createElement(Icon, { icon: 'left' }),
         ),
         Framework.createElement(
           Button,
-          { theme: 'pseudo', icon: true },
+          { theme: 'pseudo', icon: true, dataId: 'right' },
           Framework.createElement(Icon, { icon: 'right' }),
         ),
       ].join(''),
