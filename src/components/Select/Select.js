@@ -32,7 +32,7 @@ const Select = props => {
           cls: 'Select__toggle',
           dataId: 'select__toggle',
         },
-        `${selected.text}${Framework.createElement(Icon, { icon: 'left' })}`,
+        `${selected.text}${Framework.createElement(Icon, { icon: 'arrow' })}`,
       )}
       <span class="Select__wrap">
         ${renderItems}

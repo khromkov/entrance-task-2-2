@@ -20,12 +20,12 @@ const BlockDevices = props => {
         Framework.createElement(
           Button,
           { theme: 'pseudo', icon: true, dataId: 'left' },
-          Framework.createElement(Icon, { icon: 'left' }),
+          Framework.createElement(Icon, { icon: 'arrow', direction: 'left' }),
         ),
         Framework.createElement(
           Button,
           { theme: 'pseudo', icon: true, dataId: 'right' },
-          Framework.createElement(Icon, { icon: 'right' }),
+          Framework.createElement(Icon, { icon: 'arrow', direction: 'right' }),
         ),
       ].join(''),
     },

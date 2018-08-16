@@ -7,12 +7,12 @@ import temp_state_off from './temp_state_off.svg';
 import temp_state_on from './temp_state_on.svg';
 import scheduled from './scheduled.svg';
 import cloud from './cloud.svg';
-import left from './left.svg';
-import right from './right.svg';
+import arrow from './arrow.svg';
 import menu from './menu.svg';
 import sun_min from './sun_min.svg';
 import sun_max from './sun_max.svg';
 import './Icon.scss';
+import './IconArrow.scss';
 
 const icons = {
   light_state_on,
@@ -21,26 +21,31 @@ const icons = {
   temp_state_on,
   scheduled,
   cloud,
-  left,
-  right,
+  arrow,
   menu,
   sun_min,
   sun_max,
 };
 
 const Icon = props => {
-  const { icon, state, cls, size } = props;
+  const { icon, state, cls, size, direction } = props;
 
   let key = icon;
   if (state) {
     key += `_state_${state}`;
   }
 
-  return `<span class="${cls} Icon Icon_size_${size}">${icons[key]}</span>`;
+  let arrowClass = '';
+  if (icon === 'arrow') {
+    arrowClass = `IconArrow IconArrow_direction_${direction}`;
+  }
+
+  return `<span class="${cls} ${arrowClass} Icon Icon_size_${size}">${icons[key]}</span>`;
 };
 
 Icon.defaultProps = {
   size: 's',
+  direction: 'bottom',
 };
 
 export default Icon;
