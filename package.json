@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "deploy": "gh-pages -d build",
     "start": "webpack-dev-server"
   },
   "devDependencies": {
@@ -10,9 +11,15 @@
     "css-loader": "^1.0.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "gh-pages": "^1.2.0",
+    "husky": "^1.0.0-rc.13",
+    "lint-staged": "^7.2.0",
     "node-sass": "^4.9.2",
     "postcss-loader": "^2.1.6",
+    "prettier": "^1.13.7",
     "raw-loader": "^0.5.1",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
@@ -22,12 +29,7 @@
     "stylelint-scss": "^3.2.0",
     "webpack": "^4.16.3",
     "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.5",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-prettier": "^2.6.2",
-    "husky": "^1.0.0-rc.13",
-    "lint-staged": "^7.2.0",
-    "prettier": "^1.13.7"
+    "webpack-dev-server": "^3.1.5"
   },
   "dependencies": {
     "pepjs": "^0.4.3"
