@@ -47,11 +47,23 @@
     height: auto;
   }
 
+  .BlockMain__title {
+    font-size: 20px;
+  }
+
+  .BlockMain__legent {
+    font-size: 12px;
+  }
+
   .BlockMain__info {
-    padding-bottom: 0;
+    padding: 20px 20px 0;
   }
 
   .BlockMain__content {
     flex-direction: column;
+  }
+
+  .BlockMain__weather {
+    margin-top: 15px;
   }
 }

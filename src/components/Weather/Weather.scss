@@ -1,3 +1,5 @@
+@import 'styles/framework.scss';
+
 .Weather {
   display: flex;
   flex-flow: row nowrap;
@@ -26,4 +28,14 @@
 
 .Weather__valueIcon {
   margin-left: 5px;
+}
+
+@include phone {
+  .Weather__title {
+    font-size: 12px;
+  }
+
+  .Weather__value {
+    font-size: 24px;
+  }
 }
