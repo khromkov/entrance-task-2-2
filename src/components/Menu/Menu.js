@@ -10,15 +10,13 @@ const links = [
   { children: 'Сценарии', view: 'main', size: 'l' },
 ];
 
-const Menu = ({ cls }) => {
-  const renderedLinks = links
-    .map(link => Framework.createElement(Link, { ...link, cls: 'Menu__link' }))
-    .join('');
+const renderMenuLinks = props =>
+  links.map(link => Framework.createElement(Link, { ...link, ...props })).join('');
 
-  return `
+const Menu = ({ cls }) => `
     <div class="Menu ${cls}">
       <div class="Menu__desktop">
-        ${renderedLinks}
+        ${renderMenuLinks({ cls: 'Menu__link Menu__link_desktop' })}
       </div>
       <div class="Menu__mobile">
         ${Framework.createElement(
@@ -29,22 +27,29 @@ const Menu = ({ cls }) => {
         <div class="Menu__modal">
           <div class="Menu__backdrop" data-id="menu_close" role="presentation"></div>
           <div class="Menu__wrap">
-            ${renderedLinks}
+            ${renderMenuLinks({ cls: 'Menu__link Menu__link_mobile' })}
           </div>
         </div>
       </div>
     </div>
   `;
-};
 
-document.addEventListener('click', e => {
-  if (Framework.getTargetNode(e.target, node => node.dataset.id === 'menu_close')) {
-    document.querySelector('.Menu__modal').classList.remove('Menu__modal_open');
-  }
+document.addEventListener('DOMContentLoaded', () => {
+  const page = document.querySelector('.Page');
+  const menu = document.querySelector('.Menu__modal');
+  document.body.appendChild(menu);
 
-  if (Framework.getTargetNode(e.target, node => node.dataset.id === 'menu_open')) {
-    document.querySelector('.Menu__modal').classList.add('Menu__modal_open');
-  }
+  document.addEventListener('click', e => {
+    if (Framework.getTargetNode(e.target, node => node.dataset.id === 'menu_close')) {
+      menu.classList.remove('Menu__modal_open');
+      page.classList.remove('Page_modal');
+    }
+
+    if (Framework.getTargetNode(e.target, node => node.dataset.id === 'menu_open')) {
+      menu.classList.add('Menu__modal_open');
+      page.classList.add('Page_modal');
+    }
+  });
 });
 
 export default Menu;

@@ -10,7 +10,7 @@
 }
 
 .Menu__backdrop {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(51, 51, 51, 0.5);
   bottom: 0;
   cursor: pointer;
   left: 0;
@@ -48,14 +48,16 @@
 
 .Menu__mobile {
   display: none;
+}
 
-  .Menu__link + .Menu__link {
+.Menu__link_mobile {
+  & + & {
     margin-top: 10px;
   }
 }
 
-.Menu__desktop {
-  .Menu__link + .Menu__link {
+.Menu__link_desktop {
+  & + & {
     margin-left: 26px;
   }
 }
