@@ -18,6 +18,8 @@ body,
   width: 100vw;
 }
 
-body.modal {
+html.scroll_off {
+  height: 100vh;
   overflow: hidden;
+  position: fixed;
 }

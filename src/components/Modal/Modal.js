@@ -52,7 +52,6 @@ const getCloneCard = (cardNode, styles) => {
 };
 
 const REMOVE_CLASS = ['Card_animation', 'Card_hover'];
-const body = document.querySelector('body');
 
 document.addEventListener('click', e => {
   const card = Framework.getTargetNode(e.target, node => node.dataset.id === 'card');
@@ -82,12 +81,12 @@ document.addEventListener('click', e => {
     form.offsetLeft;
     document.querySelector('.Page').classList.add('Page_modal');
     modal.classList.add('Modal_visible');
-    body.classList.add('modal');
 
     form.classList.add('Animation');
     form.style.transform = '';
 
     setTimeout(() => {
+      Framework.stopBodyScrolling(true);
       cloneCard.remove();
     }, 200);
   }
@@ -119,11 +118,11 @@ document.addEventListener('click', e => {
       // eslint-disable-next-line
       openedCard.offsetLeft;
       document.querySelector('.Modal').style.display = 'none';
-      body.classList.remove('modal');
       openedCard.classList.add(...REMOVE_CLASS);
       openedCard = null;
       form.classList.remove('Animation');
       form.classList.add('Form_hidden');
+      Framework.stopBodyScrolling(false);
     }, 200);
   }
 });

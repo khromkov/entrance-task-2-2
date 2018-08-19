@@ -43,11 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (Framework.getTargetNode(e.target, node => node.dataset.id === 'menu_close')) {
       menu.classList.remove('Menu__modal_open');
       page.classList.remove('Page_modal');
+      Framework.stopBodyScrolling(false);
     }
 
     if (Framework.getTargetNode(e.target, node => node.dataset.id === 'menu_open')) {
       menu.classList.add('Menu__modal_open');
       page.classList.add('Page_modal');
+      Framework.stopBodyScrolling(true);
     }
   });
 });
