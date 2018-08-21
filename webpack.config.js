@@ -1,25 +1,37 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const PUBLIC_PATH = path.join(__dirname, 'public');
 
+const mode = process.env.NODE_ENV || 'development';
+const isDevMode = mode === 'development';
+
 module.exports = {
-  mode: 'development',
+  mode,
   entry: './src/index.js',
   output: {
     path: PUBLIC_PATH,
-    filename: 'index.js',
+    filename: isDevMode ? '[name].js' : '[name].[chunkhash].js',
+    chunkFilename: isDevMode ? '[id].js' : '[id].[chunkhash].js',
   },
   module: {
     rules: [
       {
         test: /\.css$/,
         include: [path.resolve(__dirname, 'src')],
-        loader: 'style-loader!css-loader',
+        use: [isDevMode ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
         test: /\.scss$/,
         include: [path.resolve(__dirname, 'src')],
-        loader: 'style-loader!css-loader!postcss-loader!sass-loader',
+        use: [
+          isDevMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+          'sass-loader',
+        ],
       },
       {
         test: /\.svg$/,
@@ -31,6 +43,18 @@ module.exports = {
     enforceExtension: false,
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/assets/index.html',
+    }),
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: isDevMode ? '[name].css' : '[name].[chunkhash].css',
+      chunkFilename: isDevMode ? '[id].css' : '[id].[chunkhash].css',
+    }),
+    new OptimizeCSSAssetsPlugin({}),
+  ],
   devServer: {
     contentBase: PUBLIC_PATH,
     compress: true,
