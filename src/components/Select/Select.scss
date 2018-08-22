@@ -1,7 +1,12 @@
 @import 'styles/framework.scss';
 
 .Select {
+  display: inline-block;
   position: relative;
+}
+
+.Select__native {
+  display: none;
 }
 
 .Select__toggle {
@@ -19,23 +24,43 @@
 }
 
 @include tabletAndLow {
+  .Select__wrap {
+    background: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 0 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
   .Select_adaptive {
     .Select__wrap {
-      display: none;
+      display: flex;
+      flex-flow: column nowrap;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 100%;
+      transform: translateY(10px);
+      transition: opacity 200ms, visibility 200ms, transform 200ms;
+      visibility: hidden;
+      z-index: 10;
     }
 
     &.Select_open {
       .Select__wrap {
         display: flex;
-        flex-flow: column nowrap;
-        position: absolute;
-        top: 100%;
-        z-index: 10;
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
       }
     }
 
     .Select__toggle {
       display: inline-flex;
     }
+  }
+
+  .Select__item.Select__item {
+    border-radius: 0;
+    justify-content: flex-start;
+    margin: 0;
   }
 }

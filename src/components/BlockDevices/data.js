@@ -6,6 +6,7 @@ export const cards = [
     subTitle: 'Включено',
     size: 'l',
     type: 'light',
+    tag: 'kitchen',
   },
   {
     icon: 'light',
@@ -14,6 +15,7 @@ export const cards = [
     subTitle: 'Включится в 17:00',
     size: 'l',
     type: 'floor',
+    tag: 'lights',
   },
   {
     icon: 'temp',
@@ -22,6 +24,7 @@ export const cards = [
     subTitle: 'Выключено до 17:00',
     size: 'l',
     type: 'temp',
+    tag: 'kitchen',
   },
   {
     icon: 'light',
@@ -29,6 +32,7 @@ export const cards = [
     title: 'LIFX Mini Day & Dusk A60 E27',
     subTitle: 'Включится в 17:00',
     size: 'l',
+    tag: 'lights',
   },
   {
     icon: 'light',
@@ -36,6 +40,7 @@ export const cards = [
     title: 'Xiaomi Mi Air Purifier 2S',
     subTitle: 'Включено',
     size: 'l',
+    tag: 'cameras',
   },
   {
     icon: 'light',
@@ -43,6 +48,7 @@ export const cards = [
     title: 'Philips Zhirui',
     subTitle: 'Выключено',
     size: 'l',
+    tag: 'cameras',
   },
   {
     icon: 'light',
@@ -50,6 +56,7 @@ export const cards = [
     title: 'Xiaomi Yeelight LED Smart Bulb',
     subTitle: 'Включено',
     size: 'l',
+    tag: 'kitchen',
   },
   {
     icon: 'light',
@@ -57,6 +64,7 @@ export const cards = [
     title: 'D-Link Omna 180 Cam',
     subTitle: 'Включится в 17:00',
     size: 'l',
+    tag: 'lights',
   },
   {
     icon: 'temp',
@@ -64,6 +72,7 @@ export const cards = [
     title: 'Elgato Eve Degree Connected',
     subTitle: 'Выключено до 17:00',
     size: 'l',
+    tag: 'kitchen',
   },
   {
     icon: 'light',
@@ -71,6 +80,7 @@ export const cards = [
     title: 'LIFX Mini Day & Dusk A60 E27',
     subTitle: 'Включится в 17:00',
     size: 'l',
+    tag: 'hall',
   },
   {
     icon: 'light',
@@ -78,6 +88,7 @@ export const cards = [
     title: 'Xiaomi Mi Air Purifier 2S',
     subTitle: 'Включено',
     size: 'l',
+    tag: 'lights',
   },
   {
     icon: 'light',
@@ -85,6 +96,7 @@ export const cards = [
     title: 'Philips Zhirui',
     subTitle: 'Выключено',
     size: 'l',
+    tag: 'hall',
   },
 ];
 

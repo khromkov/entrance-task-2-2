@@ -8,16 +8,27 @@ export default (node, options = {}) => {
   const updateStateButtons = () => {
     const { scrollWidth, scrollLeft, clientWidth } = container;
 
-    if (scrollLeft === 0) {
-      left.setAttribute('disabled', true);
-    } else {
-      left.removeAttribute('disabled');
-    }
+    const isDisabledLeft = scrollLeft === 0;
+    const isDisabledRight = scrollWidth === clientWidth + scrollLeft;
 
-    if (scrollWidth === clientWidth + scrollLeft) {
-      right.setAttribute('disabled', true);
+    if (isDisabledLeft && isDisabledRight) {
+      left.style.display = 'none';
+      right.style.display = 'none';
     } else {
-      right.removeAttribute('disabled');
+      left.style.display = null;
+      right.style.display = null;
+
+      if (isDisabledLeft) {
+        left.setAttribute('disabled', true);
+      } else {
+        left.removeAttribute('disabled');
+      }
+
+      if (isDisabledRight) {
+        right.setAttribute('disabled', true);
+      } else {
+        right.removeAttribute('disabled');
+      }
     }
   };
 
@@ -49,7 +60,7 @@ export default (node, options = {}) => {
   };
 
   container.addEventListener('scroll', updateStateButtons);
-  document.addEventListener('resize', updateStateButtons);
+  window.addEventListener('resize', updateStateButtons);
   left.addEventListener('click', leftClick);
   right.addEventListener('click', rightClick);
   updateStateButtons();

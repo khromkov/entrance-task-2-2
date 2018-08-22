@@ -13,6 +13,7 @@ export default class Card extends Framework.Component {
       size,
       cls,
       type,
+      tag,
       attrs,
       ...passPropsThrough
     } = this.props;
@@ -23,7 +24,7 @@ export default class Card extends Framework.Component {
         tag: 'button',
         cls: Framework.Component.template`Card Card_size_${size} ${cls} Card_animation Card_hover`,
         dataId: 'card',
-        attrs: `${attrs} data-type="${type}"`,
+        attrs: `${attrs} data-type="${type}" data-tag="${tag}"`,
         ...passPropsThrough,
       },
       Framework.Component.template`

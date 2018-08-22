@@ -1,10 +1,14 @@
+/*
+eslint-disable no-use-before-define
+*/
+
 import Framework from 'framework';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
 import './Select.scss';
 
 const Select = props => {
-  const { value, items, cls, adaptive } = props;
+  const { value, items, cls, adaptive, dataId } = props;
 
   const renderItems = items
     .map(item =>
@@ -24,7 +28,12 @@ const Select = props => {
   const selected = items.find(item => item.value === value);
 
   return `
-    <span class="Select ${adaptive ? 'Select_adaptive' : ''} ${cls}" data-value="${value}">
+    <span class="Select ${
+      adaptive ? 'Select_adaptive' : ''
+    } ${cls}" data-value="${value}" data-id="${dataId}">
+      <select class="Select__native" value="${value}">
+        ${items.map(item => `<option value="${item.value}">${item.text}</option>`)}
+      </select>
       ${Framework.createElement(
         Button,
         {
@@ -32,7 +41,9 @@ const Select = props => {
           cls: 'Select__toggle',
           dataId: 'select__toggle',
         },
-        `${selected.text}${Framework.createElement(Icon, { icon: 'arrow' })}`,
+        `<span data-id="select__toggleVal">${selected.text}</span>${Framework.createElement(Icon, {
+          icon: 'arrow',
+        })}`,
       )}
       <span class="Select__wrap">
         ${renderItems}
@@ -49,7 +60,40 @@ document.addEventListener('click', e => {
     Button.setMod(select.querySelector(`[data-value=${value}]`), 'theme', 'normal');
     Button.setMod(item, 'theme', 'action');
     select.dataset.value = item.dataset.value;
+    const toggleVal = select.querySelector('[data-id="select__toggleVal"]');
+    toggleVal.innerHTML = item.innerHTML;
+
+    const native = select.querySelector('select');
+    native.value = item.dataset.value;
+    native.dispatchEvent(new Event('change'));
   }
+});
+
+const initSelect = node => {
+  const toggle = node.querySelector('[data-id="select__toggle"]');
+
+  const show = () => {
+    toggle.onclick = null;
+    node.classList.add('Select_open');
+    setTimeout(() => {
+      document.addEventListener('click', hide);
+    });
+  };
+
+  const hide = () => {
+    node.classList.remove('Select_open');
+    document.removeEventListener('click', hide);
+    toggle.onclick = show;
+  };
+
+  toggle.onclick = show;
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  const selects = document.querySelectorAll('.Select');
+  Object.values(selects).forEach(select => {
+    initSelect(select);
+  });
 });
 
 export default Select;
