@@ -1,3 +1,5 @@
+<img src="https://user-images.githubusercontent.com/6161300/44541504-d46d8f80-a712-11e8-8993-9c77b270e57e.png" width="128">
+
 # Задание 2 — сверстать макет
 
 [DEMO](https://khromkov.github.io/entrance-task-2-2/)
