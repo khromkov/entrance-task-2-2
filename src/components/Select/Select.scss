@@ -24,18 +24,15 @@
 }
 
 @include tabletAndLow {
-  .Select__wrap {
-    background: white;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 0 30px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  }
-
   .Select_adaptive {
     .Select__wrap {
+      background: white;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 0 30px rgba(0, 0, 0, 0.1);
       display: flex;
       flex-flow: column nowrap;
       left: 0;
       opacity: 0;
+      overflow: hidden;
       position: absolute;
       top: 100%;
       transform: translateY(10px);
@@ -56,11 +53,11 @@
     .Select__toggle {
       display: inline-flex;
     }
-  }
 
-  .Select__item.Select__item {
-    border-radius: 0;
-    justify-content: flex-start;
-    margin: 0;
+    .Select__item.Select__item {
+      border-radius: 0;
+      justify-content: flex-start;
+      margin: 0;
+    }
   }
 }
