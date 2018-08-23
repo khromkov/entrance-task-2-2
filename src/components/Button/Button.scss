@@ -4,6 +4,7 @@
   border-radius: 20px;
   cursor: pointer;
   display: inline-flex;
+  flex-shrink: 0;
   font-weight: bold;
   justify-content: center;
   transition: background 300ms;
