@@ -23,3 +23,8 @@ html.scroll_off {
   overflow: hidden;
   position: fixed;
 }
+
+html.touchable {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}

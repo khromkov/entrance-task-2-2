@@ -75,6 +75,7 @@ const initSelect = node => {
   const show = () => {
     toggle.onclick = null;
     node.classList.add('Select_open');
+    document.documentElement.classList.add('touchable');
     setTimeout(() => {
       document.addEventListener('click', hide);
     });
@@ -83,6 +84,7 @@ const initSelect = node => {
   const hide = () => {
     node.classList.remove('Select_open');
     document.removeEventListener('click', hide);
+    document.documentElement.classList.remove('touchable');
     toggle.onclick = show;
   };
 
