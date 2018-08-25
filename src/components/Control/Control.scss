@@ -1,5 +1,5 @@
 .Control {
-  border-radius: 20px;
+  cursor: pointer;
   position: relative;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
@@ -10,10 +10,13 @@
 
   &::after {
     border: 2px solid rgb(199, 199, 199);
-    border-radius: 20px;
+    bottom: 0;
     content: ' ';
     display: none;
+    left: 0;
     position: absolute;
+    right: 0;
+    top: 0;
   }
 }
 
@@ -26,13 +29,11 @@ html.utilityfocus .Control {
 }
 
 .Control_type_default {
+  border-radius: 20px;
   user-select: none;
 
   &::after {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
+    border-radius: 20px;
   }
 }
 

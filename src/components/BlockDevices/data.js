@@ -32,6 +32,7 @@ export const cards = [
     title: 'LIFX Mini Day & Dusk A60 E27',
     subTitle: 'Включится в 17:00',
     size: 'l',
+    type: 'floor',
     tag: 'lights',
   },
   {
@@ -40,6 +41,7 @@ export const cards = [
     title: 'Xiaomi Mi Air Purifier 2S',
     subTitle: 'Включено',
     size: 'l',
+    type: 'temp',
     tag: 'cameras',
   },
   {
@@ -48,6 +50,7 @@ export const cards = [
     title: 'Philips Zhirui',
     subTitle: 'Выключено',
     size: 'l',
+    type: 'floor',
     tag: 'cameras',
   },
   {
@@ -56,6 +59,7 @@ export const cards = [
     title: 'Xiaomi Yeelight LED Smart Bulb',
     subTitle: 'Включено',
     size: 'l',
+    type: 'temp',
     tag: 'kitchen',
   },
   {

@@ -25,7 +25,7 @@ const Menu = ({ cls }) => `
           Framework.createElement(Icon, { icon: 'menu' }),
         )}
         <div class="Menu__modal">
-          <div class="Menu__backdrop" data-id="menu_close" role="presentation"></div>
+          <div class="Menu__backdrop Control" data-id="menu_close" role="presentation"></div>
           <div class="Menu__wrap">
             ${renderMenuLinks({ cls: 'Menu__link Menu__link_mobile' })}
           </div>
